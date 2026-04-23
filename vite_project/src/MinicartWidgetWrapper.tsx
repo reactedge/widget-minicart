@@ -53,10 +53,10 @@ export const MinicartWidgetWrapper = ({ host }: Props) => {
                 <MinicartHeader cart={cart} closeCart={closeCart}/>
 
                 <div style={contentStyle}>
-                    {cart.items.length === 0 ? <MinicartEmpty/> : <MinicartItemList cart={cart} config={config}/>}
+                    {cart.items === undefined || cart.items?.length === 0 ? <MinicartEmpty/> : <MinicartItemList cart={cart} config={config}/>}
                 </div>
 
-                {cart.items.length > 0 && (
+                {cart.items?.length > 0 && (
                     <div style={footerStyle}>
                         <MinicartFooter cart={cart} config={config}/>
                     </div>

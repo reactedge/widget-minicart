@@ -39,7 +39,7 @@ export interface MinicartRuntimeConfig {
 
 export interface MinicartDataConfig {
     readonly summary_count: number;
-    readonly items: MinicartItem[];
+    readonly items: MinicartItem[] | undefined;
 }
 
 export interface MinicartTranslationsConfig {

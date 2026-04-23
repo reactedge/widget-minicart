@@ -20,7 +20,7 @@ interface MinicartListProps {
 export function MinicartItemList({ cart, config }: MinicartListProps) {
     return (
         <div style={itemListStyle}>
-            {cart?.items.map(item => (
+            {cart?.items?.map(item => (
                 <div key={item.item_id} style={itemRowStyle}>
                     <img
                         src={item.thumbnail.src}
